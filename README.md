@@ -1,4 +1,4 @@
-# Genomics RISC-V Open Repository
+# Genomics RISC-V Open-data Repository
 
 This is a repository of results obtained experimenting with Epistasis genomics workload on RISC-V architectures.
 The current repository will be moved into a proper web-site with tools to properly visualize the data gathered. However, for now, we provide the results as txt files with the output of the workload for the several cases we examined so far.
