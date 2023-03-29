@@ -1,0 +1,3 @@
+[submodule "VIA_workload"]
+	path = VIA_workload
+	url = https://gitlab.bsc.es/datacentric-computing/epistasia-riscv
