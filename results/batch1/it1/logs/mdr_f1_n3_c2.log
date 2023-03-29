@@ -1,0 +1,141 @@
+/opt/slurm/22.05.3/var/slurm/job126445/slurm_script: line 18: module: command not found
+
+------------------
+Running STARTSPARK.py
+------------------
+
+-- Creating spark instances
+-- Creating tmp directories and throing spark instance in 192.168.3.82
+load singularity/3.9.6 (PATH)
+INFO:    Converting SIF file to temporary sandbox...
+is a directory
+
+INFO:    instance started successfully
+-- Creating tmp directories and throing spark instance in 192.168.3.83
+rm: cannot remove '/tmp/spark/logs': No such file or directory
+rm: cannot remove '/tmp/spark/work': No such file or directory
+load singularity/3.9.6 (PATH)
+INFO:    Converting SIF file to temporary sandbox...
+is a directory
+
+INFO:    instance started successfully
+-- Creating tmp directories and throing spark instance in 192.168.3.84
+rm: cannot remove '/tmp/spark/logs': No such file or directory
+rm: cannot remove '/tmp/spark/work': No such file or directory
+load singularity/3.9.6 (PATH)
+INFO:    Converting SIF file to temporary sandbox...
+is a directory
+
+INFO:    instance started successfully
+-- Creating tmp directories and starting spark instance in 192.168.3.81
+rm: cannot remove '/tmp/spark/logs': No such file or directory
+rm: cannot remove '/tmp/spark/work': No such file or directory
+load singularity/3.9.6 (PATH)
+INFO:    Converting SIF file to temporary sandbox...
+is a directory
+
+INFO:    instance started successfully
+-- Starting MASTER
+load singularity/3.9.6 (PATH)
+is a directory
+starting org.apache.spark.deploy.master.Master, logging to /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.master.Master-1-arriesgado-3.out
+failed to launch: nice -n 0 /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master --host 192.168.3.81 --port 7078 --webui-port 8081
+full log in /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.master.Master-1-arriesgado-3.out
+-- Starting WORKER 192.168.3.82
+load singularity/3.9.6 (PATH)
+is a directory
+starting org.apache.spark.deploy.worker.Worker, logging to /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-1-arriesgado-4.out
+failed to launch: nice -n 0 /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker --webui-port 8082 192.168.3.81:7078 --cores 2
+full log in /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-1-arriesgado-4.out
+-- Starting WORKER 192.168.3.83
+load singularity/3.9.6 (PATH)
+is a directory
+starting org.apache.spark.deploy.worker.Worker, logging to /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-2-arriesgado-5.out
+failed to launch: nice -n 0 /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker --webui-port 8083 192.168.3.81:7078 --cores 2
+full log in /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-2-arriesgado-5.out
+-- Starting WORKER 192.168.3.84
+load singularity/3.9.6 (PATH)
+is a directory
+starting org.apache.spark.deploy.worker.Worker, logging to /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-3-arriesgado-6.out
+failed to launch: nice -n 0 /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker --webui-port 8084 192.168.3.81:7078 --cores 2
+full log in /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-3-arriesgado-6.out
+
+
+------------------
+STARTSPARK.py done!
+------------------
+
+copying epistasis input to node 192.168.3.82
+copying epistasis input to node 192.168.3.83
+copying epistasis input to node 192.168.3.84
+load singularity/3.9.6 (PATH)
+is a directory
+23/03/14 19:50:08 WARN Utils: Your hostname, arriesgado-3 resolves to a loopback address: 127.0.1.1; using 192.168.3.81 instead (on interface eth0)
+23/03/14 19:50:08 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/opt/spark/jars/spark-unsafe_2.12-3.1.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+23/03/14 19:50:29 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[Stage 0:>                                                          (0 + 0) / 1][Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                                                          (0 + 1) / 1][Stage 0:===========================================================(1 + 0) / 1]                                                                                [Stage 1:>                                                          (0 + 0) / 1][Stage 1:>                                                          (0 + 1) / 1]                                                                                [Stage 2:>                                                          (0 + 2) / 2][Stage 2:=============================>                             (1 + 1) / 2]                                                                                [Stage 3:>                                                          (0 + 1) / 1]                                                                                [Stage 4:>                                                          (0 + 1) / 1]                                                                                [Stage 5:>                                                          (0 + 6) / 6][Stage 5:===================>                                       (2 + 4) / 6][Stage 5:=======================================>                   (4 + 2) / 6]                                                                                [Stage 6:>                                                          (0 + 1) / 1]                                                                                [Stage 7:>                                                          (0 + 1) / 1]                                                                                [Stage 8:>                                                         (0 + 6) / 36][Stage 8:===>                                                      (2 + 7) / 36][Stage 8:======>                                                   (4 + 6) / 36][Stage 8:======>                                                   (4 + 7) / 36][Stage 8:=========>                                                (6 + 7) / 36][Stage 8:===========>                                              (7 + 6) / 36][Stage 8:============>                                             (8 + 6) / 36][Stage 8:==============>                                           (9 + 6) / 36][Stage 8:===============>                                         (10 + 6) / 36][Stage 8:===================>                                     (12 + 7) / 36][Stage 8:======================>                                  (14 + 6) / 36][Stage 8:=======================>                                 (15 + 6) / 36][Stage 8:=========================>                               (16 + 6) / 36][Stage 8:============================>                            (18 + 6) / 36][Stage 8:===============================>                         (20 + 6) / 36][Stage 8:=================================>                       (21 + 7) / 36][Stage 8:==================================>                      (22 + 6) / 36][Stage 8:====================================>                    (23 + 6) / 36][Stage 8:=======================================>                 (25 + 7) / 36][Stage 8:=========================================>               (26 + 6) / 36][Stage 8:==========================================>              (27 + 7) / 36][Stage 8:============================================>            (28 + 6) / 36][Stage 8:=============================================>           (29 + 6) / 36][Stage 8:===============================================>         (30 + 6) / 36][Stage 8:=================================================>       (31 + 5) / 36][Stage 8:==================================================>      (32 + 4) / 36][Stage 8:=====================================================>   (34 + 2) / 36][Stage 8:=======================================================> (35 + 1) / 36]                                                                                [Stage 9:>                                                         (0 + 6) / 36][Stage 9:>                                                         (0 + 7) / 36][Stage 9:====>                                                     (3 + 7) / 36][Stage 9:========>                                                 (5 + 6) / 36][Stage 9:=========>                                                (6 + 6) / 36][Stage 9:=========>                                                (6 + 7) / 36][Stage 9:==============>                                           (9 + 6) / 36][Stage 9:=================>                                       (11 + 6) / 36][Stage 9:===================>                                     (12 + 6) / 36][Stage 9:===================>                                     (12 + 7) / 36][Stage 9:======================>                                  (14 + 7) / 36][Stage 9:=======================>                                 (15 + 8) / 36][Stage 9:==========================>                              (17 + 6) / 36][Stage 9:============================>                            (18 + 6) / 36][Stage 9:============================>                            (18 + 7) / 36][Stage 9:===============================>                         (20 + 7) / 36][Stage 9:==================================>                      (22 + 7) / 36][Stage 9:====================================>                    (23 + 6) / 36][Stage 9:======================================>                  (24 + 6) / 36][Stage 9:======================================>                  (24 + 7) / 36][Stage 9:=========================================>               (26 + 7) / 36][Stage 9:=============================================>           (29 + 6) / 36][Stage 9:===============================================>         (30 + 6) / 36][Stage 9:==================================================>      (32 + 4) / 36][Stage 9:====================================================>    (33 + 3) / 36][Stage 9:=======================================================> (35 + 1) / 36][Stage 9:=========================================================(36 + 0) / 36]                                                                                [Stage 10:>                                                        (0 + 0) / 36][Stage 10:>                                                        (0 + 6) / 36][Stage 10:>                                                        (0 + 8) / 36][Stage 10:===>                                                     (2 + 7) / 36][Stage 10:=======>                                                 (5 + 7) / 36][Stage 10:=========>                                               (6 + 6) / 36][Stage 10:============>                                            (8 + 6) / 36][Stage 10:===============>                                        (10 + 6) / 36][Stage 10:=================>                                      (11 + 6) / 36][Stage 10:==================>                                     (12 + 6) / 36][Stage 10:=====================>                                  (14 + 7) / 36][Stage 10:========================>                               (16 + 7) / 36][Stage 10:==========================>                             (17 + 6) / 36][Stage 10:==========================>                             (17 + 7) / 36][Stage 10:============================>                           (18 + 6) / 36][Stage 10:============================>                           (18 + 7) / 36][Stage 10:===============================>                        (20 + 7) / 36][Stage 10:===================================>                    (23 + 6) / 36][Stage 10:=====================================>                  (24 + 6) / 36][Stage 10:======================================>                 (25 + 6) / 36][Stage 10:==========================================>             (27 + 7) / 36][Stage 10:=============================================>          (29 + 6) / 36][Stage 10:==============================================>         (30 + 6) / 36][Stage 10:===================================================>    (33 + 3) / 36][Stage 10:======================================================> (35 + 1) / 36]                                                                                
+--------------------------------
+--- STARTING sparkmdr_x86.py ---
+--------------------------------
+
+Number of files to be processed 1.
+Number of cores set to 2.
+Number of partitions of the rdd set to 6.
+Connected with spartk
+Patients read
+Ration cases/controls: 0.8768718801996672
+List of files obtained.
+
+----- RUNNING 1 FILES -----
+
+Loading main file chr22_NuGENE0000.gz
+File loaded in :  30.657072866801172
+RDD1 partitions: 6
+RDD1 variants: 50
+Processing secondary file chr22_NuGENE0000.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Combined main file chr22_NuGENE0000.gz in: 184.52645000815392
+------------------------------------------
+
+Running time: 184.5265390081331
+Total time: 749.3461032398045
+Total pairs processed: 2500
+/opt/slurm/22.05.3/var/slurm/job126445/slurm_script: line 36: module: command not found
+
+-------------------
+Running STOPSPARK.py
+-------------------
+
+-- Stopping MASTER 192.168.3.81
+bash: line 1: singularity: command not found
+Stopping WORKER 192.168.3.82
+bash: line 1: singularity: command not found
+Stopping WORKER 192.168.3.83
+bash: line 1: singularity: command not found
+Stopping WORKER 192.168.3.84
+bash: line 1: singularity: command not found
+-- Stopping singularity instance
+bash: line 1: singularity: command not found
+bash: line 1: singularity: command not found
+bash: line 1: singularity: command not found
+
+-------------------
+STOPSPARK.py done!
+-------------------
+
+*************
+JSCRIPT DONE!
+*************

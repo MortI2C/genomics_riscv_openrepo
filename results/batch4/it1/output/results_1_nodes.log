@@ -1,0 +1,88 @@
+Number of cores: 1
+Dataset: partitions
+Number of partitions 1
+Number of files: 1
+Total pairs processed: 2500
+Total load time: 41.92423964198679
+Total MDR time: 81.3771588341333
+Total save time: 48.16427612537518
+Run time: 174.88176384568214
+Total time: 698.37673383113
+
+Number of cores: 2
+Dataset: partitions
+Number of partitions 2
+Number of files: 1
+Total pairs processed: 2500
+Total load time: 42.28225723002106
+Total MDR time: 61.29284476209432
+Total save time: 39.83883335487917
+Run time: 146.94875546731055
+Total time: 684.4243365908042
+
+Number of cores: 4
+Dataset: partitions
+Number of partitions 2
+Number of files: 1
+Total pairs processed: 2500
+Total load time: 45.584988015238196
+Total MDR time: 49.37787415413186
+Total save time: 32.25459645409137
+Run time: 130.86149557912722
+Total time: 668.256413502153
+
+Number of cores: 1
+Dataset: partitions
+Number of partitions 1
+Number of files: 3
+Total pairs processed: 15000
+Total load time: 154.60407040361315
+Total MDR time: 483.587642618455
+Total save time: 272.56666775932536
+Run time: 920.0099237919785
+Total time: 1455.8920363741927
+
+Number of cores: 2
+Dataset: partitions
+Number of partitions 2
+Number of files: 3
+Total pairs processed: 15000
+Total load time: 161.64141496969387
+Total MDR time: 376.6835143221542
+Total save time: 231.02823603106663
+Run time: 778.711715572048
+Total time: 1309.4618480177596
+
+Number of cores: 4
+Dataset: partitions
+Number of partitions 2
+Number of files: 3
+Total pairs processed: 15000
+Total load time: 158.75007074000314
+Total MDR time: 305.0027023917064
+Total save time: 186.40860594715923
+Run time: 659.6458846298046
+Total time: 1193.7469491208903
+
+Number of cores: 1
+Dataset: partitions
+Number of partitions 1
+Number of files: 5
+Total pairs processed: 37500
+Total load time: 334.17903474671766
+Total MDR time: 1200.3186874142848
+Total save time: 672.6874413713813
+Run time: 2221.591056104284
+Total time: 2754.6577499289997
+
+Number of cores: 4
+Dataset: partitions
+Number of partitions 2
+Number of files: 5
+Total pairs processed: 37500
+Total load time: 329.0610427404754
+Total MDR time: 699.5825530723669
+Total save time: 433.87351524969563
+Run time: 1477.3535198820755
+Total time: 2008.4319199942984
+

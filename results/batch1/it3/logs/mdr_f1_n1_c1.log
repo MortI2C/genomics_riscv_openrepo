@@ -1,0 +1,107 @@
+/opt/slurm/22.05.3/var/slurm/job126668/slurm_script: line 18: module: command not found
+
+------------------
+Running STARTSPARK.py
+------------------
+
+-- Creating spark instances
+-- Creating tmp directories and throing spark instance in 192.168.3.82
+rm: cannot remove '/tmp/spark/logs': No such file or directory
+rm: cannot remove '/tmp/spark/work': No such file or directory
+load singularity/3.9.6 (PATH)
+INFO:    Converting SIF file to temporary sandbox...
+is a directory
+
+INFO:    instance started successfully
+-- Creating tmp directories and starting spark instance in 192.168.3.81
+rm: cannot remove '/tmp/spark/logs': No such file or directory
+rm: cannot remove '/tmp/spark/work': No such file or directory
+load singularity/3.9.6 (PATH)
+INFO:    Converting SIF file to temporary sandbox...
+is a directory
+
+INFO:    instance started successfully
+-- Starting MASTER
+load singularity/3.9.6 (PATH)
+is a directory
+starting org.apache.spark.deploy.master.Master, logging to /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.master.Master-1-arriesgado-3.out
+failed to launch: nice -n 0 /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master --host 192.168.3.81 --port 7078 --webui-port 8081
+full log in /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.master.Master-1-arriesgado-3.out
+-- Starting WORKER 192.168.3.82
+load singularity/3.9.6 (PATH)
+is a directory
+starting org.apache.spark.deploy.worker.Worker, logging to /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-1-arriesgado-4.out
+failed to launch: nice -n 0 /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker --webui-port 8082 192.168.3.81:7078 --cores 1
+full log in /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-1-arriesgado-4.out
+
+
+------------------
+STARTSPARK.py done!
+------------------
+
+copying epistasis input to node 192.168.3.82
+load singularity/3.9.6 (PATH)
+is a directory
+23/03/15 23:53:35 WARN Utils: Your hostname, arriesgado-3 resolves to a loopback address: 127.0.1.1; using 192.168.3.81 instead (on interface eth0)
+23/03/15 23:53:35 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/opt/spark/jars/spark-unsafe_2.12-3.1.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+23/03/15 23:53:57 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[Stage 0:>                                                          (0 + 0) / 1][Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                                                          (0 + 1) / 1][Stage 0:===========================================================(1 + 0) / 1]                                                                                [Stage 1:>                                                          (0 + 1) / 1]                                                                                [Stage 2:>                                                          (0 + 1) / 2][Stage 2:=============================>                             (1 + 1) / 2]                                                                                [Stage 3:>                                                          (0 + 1) / 1][Stage 3:===========================================================(1 + 0) / 1]                                                                                [Stage 4:>                                                          (0 + 1) / 1]                                                                                [Stage 5:>                                                          (0 + 1) / 1]                                                                                [Stage 6:>                                                          (0 + 1) / 1]                                                                                [Stage 7:>                                                          (0 + 1) / 1]                                                                                [Stage 8:>                                                          (0 + 1) / 1]                                                                                [Stage 9:>                                                          (0 + 1) / 1]                                                                                [Stage 10:>                                                         (0 + 0) / 1][Stage 10:>                                                         (0 + 1) / 1]                                                                                
+--------------------------------
+--- STARTING sparkmdr_x86.py ---
+--------------------------------
+
+Number of files to be processed 1.
+Number of cores set to 1.
+Number of partitions of the rdd set to 1.
+Connected with spartk
+Patients read
+Ration cases/controls: 0.8768718801996672
+List of files obtained.
+
+----- RUNNING 1 FILES -----
+
+Loading main file chr22_NuGENE0000.gz
+File loaded in :  27.2787853484042
+RDD1 partitions: 1
+RDD1 variants: 50
+Processing secondary file chr22_NuGENE0000.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Combined main file chr22_NuGENE0000.gz in: 176.29865399608389
+------------------------------------------
+
+Running time: 176.29873899603263
+Total time: 712.0786420707591
+Total pairs processed: 2500
+/opt/slurm/22.05.3/var/slurm/job126668/slurm_script: line 36: module: command not found
+
+-------------------
+Running STOPSPARK.py
+-------------------
+
+-- Stopping MASTER 192.168.3.81
+bash: line 1: singularity: command not found
+Stopping WORKER 192.168.3.82
+bash: line 1: singularity: command not found
+-- Stopping singularity instance
+bash: line 1: singularity: command not found
+
+-------------------
+STOPSPARK.py done!
+-------------------
+
+*************
+JSCRIPT DONE!
+*************

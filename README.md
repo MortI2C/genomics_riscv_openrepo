@@ -3,7 +3,8 @@
 This is a repository of results obtained experimenting with Epistasis genomics workload on RISC-V architectures.
 The current repository will be moved into a proper web-site with tools to properly visualize the data gathered. However, for now, we provide the results as txt files with the output of the workload for the several cases we examined so far.
 
-The naming convention for the files is:
+The results are in the results folders. Each batch folder consists of a repetition of the experiments, so we can consider statistics such as standard deviation.
+Naming convention for the files is:
 mdr_f[0-9]_n[0-9]_c[0-9].log
 
 Which has the following meaning:

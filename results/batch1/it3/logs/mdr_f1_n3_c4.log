@@ -1,0 +1,143 @@
+/opt/slurm/22.05.3/var/slurm/job126801/slurm_script: line 18: module: command not found
+
+------------------
+Running STARTSPARK.py
+------------------
+
+-- Creating spark instances
+-- Creating tmp directories and throing spark instance in 192.168.3.82
+rm: cannot remove '/tmp/spark/logs': No such file or directory
+rm: cannot remove '/tmp/spark/work': No such file or directory
+load singularity/3.9.6 (PATH)
+INFO:    Converting SIF file to temporary sandbox...
+is a directory
+
+INFO:    instance started successfully
+-- Creating tmp directories and throing spark instance in 192.168.3.83
+rm: cannot remove '/tmp/spark/logs': No such file or directory
+rm: cannot remove '/tmp/spark/work': No such file or directory
+load singularity/3.9.6 (PATH)
+INFO:    Converting SIF file to temporary sandbox...
+is a directory
+
+INFO:    instance started successfully
+-- Creating tmp directories and throing spark instance in 192.168.3.84
+rm: cannot remove '/tmp/spark/logs': No such file or directory
+rm: cannot remove '/tmp/spark/work': No such file or directory
+load singularity/3.9.6 (PATH)
+INFO:    Converting SIF file to temporary sandbox...
+is a directory
+
+INFO:    instance started successfully
+-- Creating tmp directories and starting spark instance in 192.168.3.81
+rm: cannot remove '/tmp/spark/logs': No such file or directory
+rm: cannot remove '/tmp/spark/work': No such file or directory
+load singularity/3.9.6 (PATH)
+INFO:    Converting SIF file to temporary sandbox...
+is a directory
+
+INFO:    instance started successfully
+-- Starting MASTER
+load singularity/3.9.6 (PATH)
+is a directory
+starting org.apache.spark.deploy.master.Master, logging to /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.master.Master-1-arriesgado-3.out
+failed to launch: nice -n 0 /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master --host 192.168.3.81 --port 7078 --webui-port 8081
+full log in /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.master.Master-1-arriesgado-3.out
+-- Starting WORKER 192.168.3.82
+load singularity/3.9.6 (PATH)
+is a directory
+starting org.apache.spark.deploy.worker.Worker, logging to /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-1-arriesgado-4.out
+failed to launch: nice -n 0 /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker --webui-port 8082 192.168.3.81:7078 --cores 4
+full log in /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-1-arriesgado-4.out
+-- Starting WORKER 192.168.3.83
+load singularity/3.9.6 (PATH)
+is a directory
+starting org.apache.spark.deploy.worker.Worker, logging to /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-2-arriesgado-5.out
+failed to launch: nice -n 0 /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker --webui-port 8083 192.168.3.81:7078 --cores 4
+full log in /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-2-arriesgado-5.out
+-- Starting WORKER 192.168.3.84
+load singularity/3.9.6 (PATH)
+is a directory
+starting org.apache.spark.deploy.worker.Worker, logging to /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-3-arriesgado-6.out
+failed to launch: nice -n 0 /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker --webui-port 8084 192.168.3.81:7078 --cores 4
+full log in /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-3-arriesgado-6.out
+
+
+------------------
+STARTSPARK.py done!
+------------------
+
+copying epistasis input to node 192.168.3.82
+copying epistasis input to node 192.168.3.83
+copying epistasis input to node 192.168.3.84
+load singularity/3.9.6 (PATH)
+is a directory
+23/03/16 19:30:48 WARN Utils: Your hostname, arriesgado-3 resolves to a loopback address: 127.0.1.1; using 192.168.3.81 instead (on interface eth0)
+23/03/16 19:30:48 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/opt/spark/jars/spark-unsafe_2.12-3.1.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+23/03/16 19:31:09 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[Stage 0:>                                                          (0 + 0) / 1][Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                                                          (0 + 1) / 1][Stage 0:===========================================================(1 + 0) / 1]                                                                                [Stage 1:>                                                          (0 + 0) / 1][Stage 1:>                                                          (0 + 1) / 1]                                                                                [Stage 2:>                                                          (0 + 2) / 2][Stage 2:=============================>                             (1 + 1) / 2]                                                                                [Stage 3:>                                                          (0 + 1) / 1][Stage 3:===========================================================(1 + 0) / 1]                                                                                [Stage 4:>                                                          (0 + 1) / 1]                                                                                [Stage 5:>                                                         (0 + 7) / 12][Stage 5:>                                                        (0 + 12) / 12][Stage 5:==============>                                           (3 + 9) / 12][Stage 5:======================================>                   (8 + 4) / 12][Stage 5:===============================================>         (10 + 2) / 12]                                                                                [Stage 6:>                                                          (0 + 1) / 1]                                                                                [Stage 7:>                                                          (0 + 1) / 1]                                                                                [Stage 8:>                                                        (0 + 0) / 144][Stage 8:>                                                        (0 + 9) / 144][Stage 8:>                                                       (0 + 12) / 144][Stage 8:>                                                       (1 + 13) / 144][Stage 8:=>                                                      (4 + 12) / 144][Stage 8:==>                                                     (7 + 13) / 144][Stage 8:===>                                                   (10 + 13) / 144][Stage 8:====>                                                  (12 + 13) / 144][Stage 8:=====>                                                 (14 + 13) / 144][Stage 8:======>                                                (17 + 13) / 144][Stage 8:========>                                              (21 + 13) / 144][Stage 8:=========>                                             (24 + 13) / 144][Stage 8:==========>                                            (27 + 12) / 144][Stage 8:==========>                                            (28 + 14) / 144][Stage 8:===========>                                           (31 + 14) / 144][Stage 8:=============>                                         (36 + 12) / 144][Stage 8:==============>                                        (38 + 13) / 144][Stage 8:===============>                                       (41 + 13) / 144][Stage 8:================>                                      (43 + 14) / 144][Stage 8:=================>                                     (46 + 13) / 144][Stage 8:===================>                                   (50 + 12) / 144][Stage 8:===================>                                   (52 + 14) / 144][Stage 8:=====================>                                 (56 + 12) / 144][Stage 8:======================>                                (58 + 13) / 144][Stage 8:=======================>                               (61 + 13) / 144][Stage 8:========================>                              (64 + 12) / 144][Stage 8:=========================>                             (67 + 13) / 144][Stage 8:==========================>                            (69 + 14) / 144][Stage 8:===========================>                           (71 + 13) / 144][Stage 8:============================>                          (74 + 13) / 144][Stage 8:=============================>                         (78 + 13) / 144][Stage 8:===============================>                       (82 + 12) / 144][Stage 8:================================>                      (84 + 12) / 144][Stage 8:================================>                      (86 + 13) / 144][Stage 8:=================================>                     (89 + 13) / 144][Stage 8:===================================>                   (93 + 12) / 144][Stage 8:====================================>                  (95 + 13) / 144][Stage 8:=====================================>                 (98 + 13) / 144][Stage 8:======================================>               (102 + 12) / 144][Stage 8:=======================================>              (104 + 12) / 144][Stage 8:========================================>             (107 + 13) / 144][Stage 8:=========================================>            (110 + 13) / 144][Stage 8:==========================================>           (113 + 13) / 144][Stage 8:===========================================>          (116 + 13) / 144][Stage 8:============================================>         (118 + 14) / 144][Stage 8:=============================================>        (122 + 12) / 144][Stage 8:==============================================>       (124 + 13) / 144][Stage 8:===============================================>      (127 + 13) / 144][Stage 8:================================================>     (130 + 13) / 144][Stage 8:=================================================>    (133 + 11) / 144][Stage 8:===================================================>   (135 + 9) / 144][Stage 8:=====================================================> (139 + 5) / 144][Stage 8:======================================================>(143 + 1) / 144][Stage 8:=======================================================(144 + 0) / 144]                                                                                [Stage 9:>                                                       (0 + 12) / 144][Stage 9:>                                                       (2 + 13) / 144][Stage 9:=>                                                      (4 + 15) / 144][Stage 9:===>                                                    (8 + 13) / 144][Stage 9:====>                                                  (12 + 12) / 144][Stage 9:====>                                                  (13 + 13) / 144][Stage 9:======>                                                (16 + 13) / 144][Stage 9:=======>                                               (19 + 13) / 144][Stage 9:========>                                              (23 + 12) / 144][Stage 9:=========>                                             (25 + 13) / 144][Stage 9:==========>                                            (28 + 12) / 144][Stage 9:===========>                                           (30 + 13) / 144][Stage 9:============>                                          (33 + 13) / 144][Stage 9:=============>                                         (36 + 12) / 144][Stage 9:===============>                                       (40 + 12) / 144][Stage 9:===============>                                       (41 + 13) / 144][Stage 9:=================>                                     (45 + 12) / 144][Stage 9:=================>                                     (47 + 13) / 144][Stage 9:===================>                                   (50 + 13) / 144][Stage 9:====================>                                  (53 + 13) / 144][Stage 9:=====================>                                 (56 + 12) / 144][Stage 9:======================>                                (58 + 13) / 144][Stage 9:=======================>                               (61 + 14) / 144][Stage 9:========================>                              (64 + 14) / 144][Stage 9:=========================>                             (67 + 13) / 144][Stage 9:==========================>                            (70 + 12) / 144][Stage 9:===========================>                           (72 + 14) / 144][Stage 9:============================>                          (75 + 13) / 144][Stage 9:==============================>                        (79 + 13) / 144][Stage 9:===============================>                       (82 + 12) / 144][Stage 9:================================>                      (84 + 12) / 144][Stage 9:================================>                      (86 + 13) / 144][Stage 9:==================================>                    (90 + 12) / 144][Stage 9:===================================>                   (93 + 13) / 144][Stage 9:====================================>                  (95 + 14) / 144][Stage 9:=====================================>                 (99 + 12) / 144][Stage 9:======================================>               (102 + 12) / 144][Stage 9:=======================================>              (104 + 13) / 144][Stage 9:========================================>             (107 + 13) / 144][Stage 9:========================================>             (109 + 13) / 144][Stage 9:==========================================>           (113 + 13) / 144][Stage 9:===========================================>          (115 + 13) / 144][Stage 9:============================================>         (118 + 14) / 144][Stage 9:=============================================>        (121 + 13) / 144][Stage 9:==============================================>       (124 + 13) / 144][Stage 9:===============================================>      (126 + 14) / 144][Stage 9:=================================================>    (131 + 12) / 144][Stage 9:=================================================>    (133 + 11) / 144][Stage 9:===================================================>   (135 + 9) / 144][Stage 9:====================================================>  (138 + 6) / 144][Stage 9:======================================================>(143 + 1) / 144]                                                                                [Stage 10:>                                                       (0 + 0) / 144][Stage 10:>                                                       (0 + 7) / 144][Stage 10:>                                                      (0 + 12) / 144][Stage 10:>                                                      (2 + 13) / 144][Stage 10:=>                                                     (4 + 14) / 144][Stage 10:===>                                                   (8 + 13) / 144][Stage 10:====>                                                 (11 + 13) / 144][Stage 10:====>                                                 (12 + 12) / 144][Stage 10:=====>                                                (14 + 13) / 144][Stage 10:======>                                               (16 + 13) / 144][Stage 10:======>                                               (18 + 13) / 144][Stage 10:=======>                                              (20 + 14) / 144][Stage 10:========>                                             (23 + 12) / 144][Stage 10:=========>                                            (24 + 12) / 144][Stage 10:=========>                                            (25 + 14) / 144][Stage 10:==========>                                           (27 + 13) / 144][Stage 10:==========>                                           (29 + 13) / 144][Stage 10:===========>                                          (31 + 14) / 144][Stage 10:============>                                         (34 + 12) / 144][Stage 10:=============>                                        (35 + 13) / 144][Stage 10:=============>                                        (36 + 12) / 144][Stage 10:=============>                                        (37 + 12) / 144][Stage 10:==============>                                       (38 + 13) / 144][Stage 10:===============>                                      (41 + 13) / 144][Stage 10:================>                                     (44 + 12) / 144][Stage 10:=================>                                    (46 + 13) / 144][Stage 10:==================>                                   (48 + 12) / 144][Stage 10:==================>                                   (49 + 12) / 144][Stage 10:==================>                                   (49 + 13) / 144][Stage 10:===================>                                  (51 + 14) / 144][Stage 10:====================>                                 (54 + 12) / 144][Stage 10:====================>                                 (55 + 13) / 144][Stage 10:=====================>                                (57 + 13) / 144][Stage 10:======================>                               (59 + 13) / 144][Stage 10:======================>                               (60 + 12) / 144][Stage 10:======================>                               (60 + 13) / 144][Stage 10:======================>                               (61 + 12) / 144][Stage 10:=======================>                              (62 + 12) / 144][Stage 10:========================>                             (64 + 12) / 144][Stage 10:========================>                             (66 + 13) / 144][Stage 10:=========================>                            (69 + 12) / 144][Stage 10:==========================>                           (70 + 13) / 144][Stage 10:===========================>                          (72 + 12) / 144][Stage 10:===========================>                          (73 + 12) / 144][Stage 10:===========================>                          (73 + 13) / 144][Stage 10:============================>                         (76 + 13) / 144][Stage 10:=============================>                        (78 + 13) / 144][Stage 10:==============================>                       (80 + 13) / 144][Stage 10:==============================>                       (82 + 13) / 144][Stage 10:===============================>                      (83 + 13) / 144][Stage 10:===============================>                      (84 + 12) / 144][Stage 10:===============================>                      (85 + 12) / 144][Stage 10:================================>                     (86 + 12) / 144][Stage 10:=================================>                    (88 + 12) / 144][Stage 10:=================================>                    (89 + 13) / 144][Stage 10:==================================>                   (93 + 12) / 144][Stage 10:===================================>                  (94 + 12) / 144][Stage 10:===================================>                  (95 + 13) / 144][Stage 10:====================================>                 (96 + 12) / 144][Stage 10:====================================>                 (97 + 12) / 144][Stage 10:====================================>                 (97 + 14) / 144][Stage 10:=====================================>                (99 + 12) / 144][Stage 10:====================================>                (100 + 13) / 144][Stage 10:=====================================>               (102 + 13) / 144][Stage 10:======================================>              (104 + 13) / 144][Stage 10:=======================================>             (106 + 12) / 144][Stage 10:=======================================>             (107 + 12) / 144][Stage 10:=======================================>             (108 + 12) / 144][Stage 10:========================================>            (109 + 12) / 144][Stage 10:========================================>            (110 + 13) / 144][Stage 10:=========================================>           (112 + 12) / 144][Stage 10:=========================================>           (113 + 12) / 144][Stage 10:=========================================>           (114 + 12) / 144][Stage 10:==========================================>          (116 + 12) / 144][Stage 10:==========================================>          (116 + 13) / 144][Stage 10:===========================================>         (118 + 14) / 144][Stage 10:============================================>        (120 + 12) / 144][Stage 10:============================================>        (121 + 12) / 144][Stage 10:============================================>        (122 + 13) / 144][Stage 10:=============================================>       (124 + 12) / 144][Stage 10:==============================================>      (125 + 12) / 144][Stage 10:==============================================>      (127 + 12) / 144][Stage 10:===============================================>     (128 + 13) / 144][Stage 10:===============================================>     (129 + 12) / 144][Stage 10:===============================================>     (130 + 13) / 144][Stage 10:================================================>    (132 + 12) / 144][Stage 10:================================================>    (133 + 11) / 144][Stage 10:=================================================>   (134 + 10) / 144][Stage 10:===================================================>  (136 + 8) / 144][Stage 10:====================================================> (139 + 5) / 144][Stage 10:====================================================> (140 + 4) / 144][Stage 10:====================================================> (141 + 3) / 144][Stage 10:=====================================================>(142 + 2) / 144]                                                                                
+--------------------------------
+--- STARTING sparkmdr_x86.py ---
+--------------------------------
+
+Number of files to be processed 1.
+Number of cores set to 4.
+Number of partitions of the rdd set to 12.
+Connected with spartk
+Patients read
+Ration cases/controls: 0.8768718801996672
+List of files obtained.
+
+----- RUNNING 1 FILES -----
+
+Loading main file chr22_NuGENE0000.gz
+File loaded in :  43.11715581221506
+RDD1 partitions: 12
+RDD1 variants: 50
+Processing secondary file chr22_NuGENE0000.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Combined main file chr22_NuGENE0000.gz in: 195.2161434092559
+------------------------------------------
+
+Running time: 195.21622640872374
+Total time: 763.6784396939911
+Total pairs processed: 2500
+/opt/slurm/22.05.3/var/slurm/job126801/slurm_script: line 36: module: command not found
+
+-------------------
+Running STOPSPARK.py
+-------------------
+
+-- Stopping MASTER 192.168.3.81
+bash: line 1: singularity: command not found
+Stopping WORKER 192.168.3.82
+bash: line 1: singularity: command not found
+Stopping WORKER 192.168.3.83
+bash: line 1: singularity: command not found
+Stopping WORKER 192.168.3.84
+bash: line 1: singularity: command not found
+-- Stopping singularity instance
+bash: line 1: singularity: command not found
+bash: line 1: singularity: command not found
+bash: line 1: singularity: command not found
+
+-------------------
+STOPSPARK.py done!
+-------------------
+
+*************
+JSCRIPT DONE!
+*************

@@ -1,0 +1,22 @@
+Number of cores: 1
+Dataset: partitions
+Number of partitions 3
+Number of files: 1
+Total pairs processed: 2500
+Total load time: 57.59461794886738
+Total MDR time: 53.98564751818776
+Total save time: 42.5642754859291
+Run time: 183.31282311491668
+Total time: 779.3304304941557
+
+Number of cores: 2
+Dataset: partitions
+Number of partitions 6
+Number of files: 1
+Total pairs processed: 2500
+Total load time: 63.154403949622065
+Total MDR time: 49.27139278082177
+Total save time: 41.583194823004305
+Run time: 170.3045042208396
+Total time: 785.0574012030847
+

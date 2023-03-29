@@ -1,0 +1,271 @@
+/opt/slurm/22.05.3/var/slurm/job127058/slurm_script: line 18: module: command not found
+
+------------------
+Running STARTSPARK.py
+------------------
+
+-- Creating spark instances
+-- Creating tmp directories and throing spark instance in 192.168.3.82
+rm: cannot remove '/tmp/spark/logs': No such file or directory
+rm: cannot remove '/tmp/spark/work': No such file or directory
+load singularity/3.9.6 (PATH)
+INFO:    Converting SIF file to temporary sandbox...
+is a directory
+
+INFO:    instance started successfully
+-- Creating tmp directories and throing spark instance in 192.168.3.83
+rm: cannot remove '/tmp/spark/logs': No such file or directory
+rm: cannot remove '/tmp/spark/work': No such file or directory
+load singularity/3.9.6 (PATH)
+INFO:    Converting SIF file to temporary sandbox...
+is a directory
+
+INFO:    instance started successfully
+-- Creating tmp directories and starting spark instance in 192.168.3.81
+rm: cannot remove '/tmp/spark/logs': No such file or directory
+rm: cannot remove '/tmp/spark/work': No such file or directory
+load singularity/3.9.6 (PATH)
+INFO:    Converting SIF file to temporary sandbox...
+is a directory
+
+INFO:    instance started successfully
+-- Starting MASTER
+load singularity/3.9.6 (PATH)
+is a directory
+starting org.apache.spark.deploy.master.Master, logging to /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.master.Master-1-arriesgado-3.out
+failed to launch: nice -n 0 /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master --host 192.168.3.81 --port 7078 --webui-port 8081
+full log in /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.master.Master-1-arriesgado-3.out
+-- Starting WORKER 192.168.3.82
+load singularity/3.9.6 (PATH)
+is a directory
+starting org.apache.spark.deploy.worker.Worker, logging to /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-1-arriesgado-4.out
+failed to launch: nice -n 0 /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker --webui-port 8082 192.168.3.81:7078 --cores 1
+full log in /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-1-arriesgado-4.out
+-- Starting WORKER 192.168.3.83
+load singularity/3.9.6 (PATH)
+is a directory
+starting org.apache.spark.deploy.worker.Worker, logging to /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-2-arriesgado-5.out
+failed to launch: nice -n 0 /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker --webui-port 8083 192.168.3.81:7078 --cores 1
+full log in /opt/spark/logs/spark-ggomez-org.apache.spark.deploy.worker.Worker-2-arriesgado-5.out
+
+
+------------------
+STARTSPARK.py done!
+------------------
+
+copying epistasis input to node 192.168.3.82
+copying epistasis input to node 192.168.3.83
+load singularity/3.9.6 (PATH)
+is a directory
+23/03/21 05:33:34 WARN Utils: Your hostname, arriesgado-3 resolves to a loopback address: 127.0.1.1; using 192.168.3.81 instead (on interface eth0)
+23/03/21 05:33:34 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/opt/spark/jars/spark-unsafe_2.12-3.1.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+23/03/21 05:33:55 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[Stage 0:>                                                          (0 + 0) / 1][Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 1:>                                                          (0 + 1) / 1][Stage 1:>                                                          (0 + 1) / 1]                                                                                [Stage 2:>                                                          (0 + 2) / 2][Stage 2:=============================>                             (1 + 1) / 2]                                                                                [Stage 3:>                                                          (0 + 1) / 1]                                                                                [Stage 4:>                                                          (0 + 1) / 1]                                                                                [Stage 5:>                                                          (0 + 2) / 2][Stage 5:=============================>                             (1 + 1) / 2]                                                                                [Stage 6:>                                                          (0 + 1) / 1]                                                                                [Stage 7:>                                                          (0 + 1) / 1][Stage 7:===========================================================(1 + 0) / 1]                                                                                [Stage 8:>                                                          (0 + 2) / 4][Stage 8:==============>                                            (1 + 2) / 4][Stage 8:=============================>                             (2 + 2) / 4][Stage 8:============================================>              (3 + 1) / 4]                                                                                [Stage 9:>                                                          (0 + 2) / 4][Stage 9:==============>                                            (1 + 2) / 4][Stage 9:=============================>                             (2 + 2) / 4][Stage 9:============================================>              (3 + 1) / 4]                                                                                [Stage 10:>                                                         (0 + 0) / 4][Stage 10:>                                                         (0 + 2) / 4][Stage 10:>                                                         (0 + 3) / 4][Stage 10:==============>                                           (1 + 2) / 4][Stage 10:==============>                                           (1 + 3) / 4][Stage 10:=============================>                            (2 + 2) / 4][Stage 10:===========================================>              (3 + 1) / 4][Stage 10:==========================================================(4 + 0) / 4]                                                                                [Stage 11:>                                                         (0 + 1) / 1]                                                                                [Stage 12:>                                                         (0 + 1) / 1]                                                                                [Stage 13:>                                                         (0 + 2) / 4][Stage 13:==============>                                           (1 + 2) / 4][Stage 13:=============================>                            (2 + 2) / 4][Stage 13:===========================================>              (3 + 1) / 4]                                                                                [Stage 14:>                                                         (0 + 2) / 4][Stage 14:>                                                         (0 + 3) / 4][Stage 14:==============>                                           (1 + 2) / 4][Stage 14:=============================>                            (2 + 2) / 4][Stage 14:===========================================>              (3 + 1) / 4]                                                                                [Stage 15:>                                                         (0 + 0) / 4][Stage 15:>                                                         (0 + 1) / 4][Stage 15:>                                                         (0 + 2) / 4][Stage 15:==============>                                           (1 + 2) / 4][Stage 15:==============>                                           (1 + 3) / 4][Stage 15:=============================>                            (2 + 2) / 4][Stage 15:===========================================>              (3 + 1) / 4]                                                                                [Stage 16:>                                                         (0 + 1) / 1]                                                                                [Stage 17:>                                                         (0 + 1) / 1]                                                                                [Stage 18:>                                                         (0 + 2) / 4][Stage 18:==============>                                           (1 + 2) / 4][Stage 18:=============================>                            (2 + 2) / 4][Stage 18:===========================================>              (3 + 1) / 4]                                                                                [Stage 19:>                                                         (0 + 2) / 4][Stage 19:==============>                                           (1 + 2) / 4][Stage 19:=============================>                            (2 + 2) / 4][Stage 19:===========================================>              (3 + 1) / 4]                                                                                [Stage 20:>                                                         (0 + 0) / 4][Stage 20:>                                                         (0 + 2) / 4][Stage 20:==============>                                           (1 + 2) / 4][Stage 20:==============>                                           (1 + 3) / 4][Stage 20:=============================>                            (2 + 2) / 4][Stage 20:===========================================>              (3 + 1) / 4]                                                                                [Stage 21:>                                                         (0 + 1) / 1]                                                                                [Stage 22:>                                                         (0 + 1) / 1]                                                                                [Stage 23:>                                                         (0 + 2) / 4][Stage 23:==============>                                           (1 + 2) / 4][Stage 23:=============================>                            (2 + 2) / 4][Stage 23:===========================================>              (3 + 1) / 4][Stage 23:==========================================================(4 + 0) / 4]                                                                                [Stage 24:>                                                         (0 + 2) / 4][Stage 24:==============>                                           (1 + 2) / 4][Stage 24:=============================>                            (2 + 2) / 4][Stage 24:===========================================>              (3 + 1) / 4][Stage 24:==========================================================(4 + 0) / 4]                                                                                [Stage 25:>                                                         (0 + 0) / 4][Stage 25:>                                                         (0 + 2) / 4][Stage 25:==============>                                           (1 + 2) / 4][Stage 25:=============================>                            (2 + 2) / 4][Stage 25:===========================================>              (3 + 1) / 4]                                                                                [Stage 26:>                                                         (0 + 1) / 1]                                                                                [Stage 27:>                                                         (0 + 1) / 1]                                                                                [Stage 28:>                                                         (0 + 2) / 4][Stage 28:==============>                                           (1 + 2) / 4][Stage 28:=============================>                            (2 + 2) / 4][Stage 28:===========================================>              (3 + 1) / 4]                                                                                [Stage 29:>                                                         (0 + 2) / 4][Stage 29:==============>                                           (1 + 2) / 4][Stage 29:=============================>                            (2 + 2) / 4][Stage 29:===========================================>              (3 + 1) / 4]                                                                                [Stage 30:>                                                         (0 + 0) / 4][Stage 30:>                                                         (0 + 1) / 4][Stage 30:>                                                         (0 + 2) / 4][Stage 30:>                                                         (0 + 3) / 4][Stage 30:==============>                                           (1 + 2) / 4][Stage 30:=============================>                            (2 + 2) / 4][Stage 30:===========================================>              (3 + 1) / 4][Stage 30:==========================================================(4 + 0) / 4]                                                                                [Stage 31:>                                                         (0 + 1) / 1]                                                                                [Stage 32:>                                                         (0 + 1) / 1]                                                                                [Stage 33:>                                                         (0 + 2) / 2]                                                                                [Stage 34:>                                                         (0 + 1) / 1]                                                                                [Stage 35:>                                                         (0 + 1) / 1]                                                                                [Stage 36:>                                                         (0 + 2) / 4][Stage 36:==============>                                           (1 + 2) / 4][Stage 36:=============================>                            (2 + 2) / 4][Stage 36:===========================================>              (3 + 1) / 4]                                                                                [Stage 37:>                                                         (0 + 2) / 4][Stage 37:==============>                                           (1 + 2) / 4][Stage 37:=============================>                            (2 + 2) / 4][Stage 37:===========================================>              (3 + 1) / 4]                                                                                [Stage 38:>                                                         (0 + 0) / 4][Stage 38:>                                                         (0 + 2) / 4][Stage 38:==============>                                           (1 + 2) / 4][Stage 38:=============================>                            (2 + 2) / 4][Stage 38:===========================================>              (3 + 1) / 4]                                                                                [Stage 39:>                                                         (0 + 1) / 1]                                                                                [Stage 40:>                                                         (0 + 1) / 1]                                                                                [Stage 41:>                                                         (0 + 2) / 4][Stage 41:==============>                                           (1 + 2) / 4][Stage 41:=============================>                            (2 + 2) / 4][Stage 41:===========================================>              (3 + 1) / 4]                                                                                [Stage 42:>                                                         (0 + 2) / 4][Stage 42:==============>                                           (1 + 2) / 4][Stage 42:=============================>                            (2 + 2) / 4][Stage 42:===========================================>              (3 + 1) / 4]                                                                                [Stage 43:>                                                         (0 + 0) / 4][Stage 43:>                                                         (0 + 2) / 4][Stage 43:==============>                                           (1 + 2) / 4][Stage 43:=============================>                            (2 + 2) / 4][Stage 43:===========================================>              (3 + 1) / 4]                                                                                [Stage 44:>                                                         (0 + 1) / 1]                                                                                [Stage 45:>                                                         (0 + 1) / 1]                                                                                [Stage 46:>                                                         (0 + 2) / 4][Stage 46:==============>                                           (1 + 2) / 4][Stage 46:=============================>                            (2 + 2) / 4][Stage 46:===========================================>              (3 + 1) / 4]                                                                                [Stage 47:>                                                         (0 + 2) / 4][Stage 47:==============>                                           (1 + 2) / 4][Stage 47:=============================>                            (2 + 2) / 4][Stage 47:===========================================>              (3 + 1) / 4][Stage 47:==========================================================(4 + 0) / 4]                                                                                [Stage 48:>                                                         (0 + 0) / 4][Stage 48:>                                                         (0 + 2) / 4][Stage 48:>                                                         (0 + 3) / 4][Stage 48:==============>                                           (1 + 2) / 4][Stage 48:=============================>                            (2 + 2) / 4][Stage 48:===========================================>              (3 + 1) / 4]                                                                                [Stage 49:>                                                         (0 + 1) / 1]                                                                                [Stage 50:>                                                         (0 + 1) / 1]                                                                                [Stage 51:>                                                         (0 + 2) / 4][Stage 51:==============>                                           (1 + 2) / 4][Stage 51:==============>                                           (1 + 3) / 4][Stage 51:=============================>                            (2 + 2) / 4][Stage 51:===========================================>              (3 + 1) / 4]                                                                                [Stage 52:>                                                         (0 + 2) / 4][Stage 52:==============>                                           (1 + 2) / 4][Stage 52:=============================>                            (2 + 2) / 4][Stage 52:===========================================>              (3 + 1) / 4]                                                                                [Stage 53:>                                                         (0 + 0) / 4][Stage 53:>                                                         (0 + 1) / 4][Stage 53:>                                                         (0 + 2) / 4][Stage 53:==============>                                           (1 + 2) / 4][Stage 53:=============================>                            (2 + 2) / 4][Stage 53:===========================================>              (3 + 1) / 4]                                                                                [Stage 54:>                                                         (0 + 1) / 1]                                                                                [Stage 55:>                                                         (0 + 1) / 1]                                                                                [Stage 56:>                                                         (0 + 2) / 2][Stage 56:=============================>                            (1 + 1) / 2]                                                                                [Stage 57:>                                                         (0 + 1) / 1]                                                                                [Stage 58:>                                                         (0 + 1) / 1]                                                                                [Stage 59:>                                                         (0 + 2) / 4][Stage 59:==============>                                           (1 + 2) / 4][Stage 59:=============================>                            (2 + 2) / 4][Stage 59:===========================================>              (3 + 1) / 4]                                                                                [Stage 60:>                                                         (0 + 2) / 4][Stage 60:>                                                         (0 + 3) / 4][Stage 60:==============>                                           (1 + 2) / 4][Stage 60:=============================>                            (2 + 2) / 4][Stage 60:===========================================>              (3 + 1) / 4]                                                                                [Stage 61:>                                                         (0 + 0) / 4][Stage 61:>                                                         (0 + 2) / 4][Stage 61:==============>                                           (1 + 2) / 4][Stage 61:=============================>                            (2 + 2) / 4][Stage 61:===========================================>              (3 + 1) / 4]                                                                                [Stage 62:>                                                         (0 + 1) / 1]                                                                                [Stage 63:>                                                         (0 + 1) / 1]                                                                                [Stage 64:>                                                         (0 + 2) / 4][Stage 64:==============>                                           (1 + 2) / 4][Stage 64:=============================>                            (2 + 2) / 4][Stage 64:===========================================>              (3 + 1) / 4]                                                                                [Stage 65:>                                                         (0 + 2) / 4][Stage 65:==============>                                           (1 + 2) / 4][Stage 65:==============>                                           (1 + 3) / 4][Stage 65:=============================>                            (2 + 2) / 4][Stage 65:===========================================>              (3 + 1) / 4]                                                                                [Stage 66:>                                                         (0 + 0) / 4][Stage 66:>                                                         (0 + 2) / 4][Stage 66:==============>                                           (1 + 2) / 4][Stage 66:=============================>                            (2 + 2) / 4][Stage 66:===========================================>              (3 + 1) / 4]                                                                                [Stage 67:>                                                         (0 + 1) / 1]                                                                                [Stage 68:>                                                         (0 + 1) / 1]                                                                                [Stage 69:>                                                         (0 + 2) / 4][Stage 69:==============>                                           (1 + 2) / 4][Stage 69:=============================>                            (2 + 2) / 4][Stage 69:===========================================>              (3 + 1) / 4]                                                                                [Stage 70:>                                                         (0 + 2) / 4][Stage 70:==============>                                           (1 + 2) / 4][Stage 70:=============================>                            (2 + 2) / 4][Stage 70:===========================================>              (3 + 1) / 4]                                                                                [Stage 71:>                                                         (0 + 0) / 4][Stage 71:>                                                         (0 + 2) / 4][Stage 71:>                                                         (0 + 3) / 4][Stage 71:==============>                                           (1 + 2) / 4][Stage 71:=============================>                            (2 + 2) / 4][Stage 71:===========================================>              (3 + 1) / 4]                                                                                [Stage 72:>                                                         (0 + 1) / 1]                                                                                [Stage 73:>                                                         (0 + 1) / 1]                                                                                [Stage 74:>                                                         (0 + 2) / 2]                                                                                [Stage 75:>                                                         (0 + 1) / 1]                                                                                [Stage 76:>                                                         (0 + 1) / 1]                                                                                [Stage 77:>                                                         (0 + 2) / 4][Stage 77:==============>                                           (1 + 2) / 4][Stage 77:=============================>                            (2 + 2) / 4][Stage 77:===========================================>              (3 + 1) / 4]                                                                                [Stage 78:>                                                         (0 + 2) / 4][Stage 78:==============>                                           (1 + 2) / 4][Stage 78:==============>                                           (1 + 3) / 4][Stage 78:=============================>                            (2 + 2) / 4][Stage 78:===========================================>              (3 + 1) / 4]                                                                                [Stage 79:>                                                         (0 + 0) / 4][Stage 79:>                                                         (0 + 2) / 4][Stage 79:==============>                                           (1 + 2) / 4][Stage 79:=============================>                            (2 + 2) / 4][Stage 79:===========================================>              (3 + 1) / 4]                                                                                [Stage 80:>                                                         (0 + 1) / 1]                                                                                [Stage 81:>                                                         (0 + 1) / 1]                                                                                [Stage 82:>                                                         (0 + 2) / 4][Stage 82:==============>                                           (1 + 2) / 4][Stage 82:==============>                                           (1 + 3) / 4][Stage 82:=============================>                            (2 + 2) / 4][Stage 82:===========================================>              (3 + 1) / 4]                                                                                [Stage 83:>                                                         (0 + 2) / 4][Stage 83:>                                                         (0 + 3) / 4][Stage 83:==============>                                           (1 + 2) / 4][Stage 83:=============================>                            (2 + 2) / 4][Stage 83:===========================================>              (3 + 1) / 4]                                                                                [Stage 84:>                                                         (0 + 0) / 4][Stage 84:>                                                         (0 + 2) / 4][Stage 84:==============>                                           (1 + 2) / 4][Stage 84:==============>                                           (1 + 3) / 4][Stage 84:=============================>                            (2 + 2) / 4][Stage 84:===========================================>              (3 + 1) / 4]                                                                                [Stage 85:>                                                         (0 + 1) / 1]                                                                                [Stage 86:>                                                         (0 + 1) / 1][Stage 86:==========================================================(1 + 0) / 1]                                                                                [Stage 87:>                                                         (0 + 2) / 2]                                                                                [Stage 88:>                                                         (0 + 1) / 1]                                                                                [Stage 89:>                                                         (0 + 1) / 1]                                                                                [Stage 90:>                                                         (0 + 2) / 4][Stage 90:==============>                                           (1 + 2) / 4][Stage 90:=============================>                            (2 + 2) / 4][Stage 90:===========================================>              (3 + 1) / 4][Stage 90:==========================================================(4 + 0) / 4]                                                                                [Stage 91:>                                                         (0 + 2) / 4][Stage 91:==============>                                           (1 + 2) / 4][Stage 91:=============================>                            (2 + 2) / 4][Stage 91:===========================================>              (3 + 1) / 4][Stage 91:==========================================================(4 + 0) / 4]                                                                                [Stage 92:>                                                         (0 + 0) / 4][Stage 92:>                                                         (0 + 2) / 4][Stage 92:==============>                                           (1 + 2) / 4][Stage 92:=============================>                            (2 + 2) / 4][Stage 92:===========================================>              (3 + 1) / 4]                                                                                
+--------------------------------
+--- STARTING sparkmdr_x86.py ---
+--------------------------------
+
+Number of files to be processed 5.
+Number of cores set to 1.
+Number of partitions of the rdd set to 2.
+Connected with spartk
+Patients read
+Ration cases/controls: 0.8768718801996672
+List of files obtained.
+
+----- RUNNING 5 FILES -----
+
+Loading main file chr22_NuGENE0000.gz
+File loaded in :  25.992834056727588
+RDD1 partitions: 2
+RDD1 variants: 50
+Processing secondary file chr22_NuGENE0000.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Processing secondary file chr22_NuGENE0001.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Processing secondary file chr22_NuGENE0002.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Processing secondary file chr22_NuGENE0003.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Processing secondary file chr22_NuGENE0004.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Combined main file chr22_NuGENE0000.gz in: 631.9028228130192
+------------------------------------------
+
+Loading main file chr22_NuGENE0001.gz
+File loaded in :  19.243547986261547
+RDD1 partitions: 2
+RDD1 variants: 50
+Processing secondary file chr22_NuGENE0000.gz
+Skipping file. mdr_chr22_NuGENE0000_chr22_NuGENE0001 already processed.
+Processing secondary file chr22_NuGENE0001.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Processing secondary file chr22_NuGENE0002.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Processing secondary file chr22_NuGENE0003.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Processing secondary file chr22_NuGENE0004.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Combined main file chr22_NuGENE0001.gz in: 480.0421772762202
+------------------------------------------
+
+Loading main file chr22_NuGENE0002.gz
+File loaded in :  19.12324180500582
+RDD1 partitions: 2
+RDD1 variants: 50
+Processing secondary file chr22_NuGENE0000.gz
+Skipping file. mdr_chr22_NuGENE0000_chr22_NuGENE0002 already processed.
+Processing secondary file chr22_NuGENE0001.gz
+Skipping file. mdr_chr22_NuGENE0001_chr22_NuGENE0002 already processed.
+Processing secondary file chr22_NuGENE0002.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Processing secondary file chr22_NuGENE0003.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Processing secondary file chr22_NuGENE0004.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Combined main file chr22_NuGENE0002.gz in: 364.3247440890409
+------------------------------------------
+
+Loading main file chr22_NuGENE0003.gz
+File loaded in :  15.834999221377075
+RDD1 partitions: 2
+RDD1 variants: 50
+Processing secondary file chr22_NuGENE0000.gz
+Skipping file. mdr_chr22_NuGENE0000_chr22_NuGENE0003 already processed.
+Processing secondary file chr22_NuGENE0001.gz
+Skipping file. mdr_chr22_NuGENE0001_chr22_NuGENE0003 already processed.
+Processing secondary file chr22_NuGENE0002.gz
+Skipping file. mdr_chr22_NuGENE0002_chr22_NuGENE0003 already processed.
+Processing secondary file chr22_NuGENE0003.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Processing secondary file chr22_NuGENE0004.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Combined main file chr22_NuGENE0003.gz in: 247.378950514365
+------------------------------------------
+
+Loading main file chr22_NuGENE0004.gz
+File loaded in :  18.931191786192358
+RDD1 partitions: 2
+RDD1 variants: 50
+Processing secondary file chr22_NuGENE0000.gz
+Skipping file. mdr_chr22_NuGENE0000_chr22_NuGENE0004 already processed.
+Processing secondary file chr22_NuGENE0001.gz
+Skipping file. mdr_chr22_NuGENE0001_chr22_NuGENE0004 already processed.
+Processing secondary file chr22_NuGENE0002.gz
+Skipping file. mdr_chr22_NuGENE0002_chr22_NuGENE0004 already processed.
+Processing secondary file chr22_NuGENE0003.gz
+Skipping file. mdr_chr22_NuGENE0003_chr22_NuGENE0004 already processed.
+Processing secondary file chr22_NuGENE0004.gz
+File 2 loaded.
+Applying MDR...
+MDR applied to: 2500 pairs.
+Saving data...
+Data saved.
+
+Combined main file chr22_NuGENE0004.gz in: 132.48887427290902
+------------------------------------------
+
+Running time: 1856.1378969647922
+Total time: 2444.2835277989507
+Total pairs processed: 37500
+/opt/slurm/22.05.3/var/slurm/job127058/slurm_script: line 36: module: command not found
+
+-------------------
+Running STOPSPARK.py
+-------------------
+
+-- Stopping MASTER 192.168.3.81
+bash: line 1: singularity: command not found
+Stopping WORKER 192.168.3.82
+bash: line 1: singularity: command not found
+Stopping WORKER 192.168.3.83
+bash: line 1: singularity: command not found
+-- Stopping singularity instance
+bash: line 1: singularity: command not found
+bash: line 1: singularity: command not found
+
+-------------------
+STOPSPARK.py done!
+-------------------
+
+*************
+JSCRIPT DONE!
+*************
